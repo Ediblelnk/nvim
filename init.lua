@@ -26,6 +26,8 @@ local plugins = {
 local opts = {}
  
 require("lazy").setup(plugins, opts)
+local builtin = require("telescope.builtin")
+vim.keymap.set('n', '<C-p>', builtin.find_files, {})
 
 require("catppuccin").setup()
 vim.cmd.colorscheme "catppuccin"
